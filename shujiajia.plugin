@@ -1,0 +1,9 @@
+#!name=isbuy Mock 示例
+#!desc=将 isbuy 接口响应固定替换为 buySuccess=true（仅用于调试）
+#!author=ChatGPT
+
+[Script]
+http-response ^https://app\.xdfsjj\.com/userorderservice/isbuy/v2\.do$ script-path=isbuy.js, requires-body=true
+
+[MITM]
+hostname = app.xdfsjj.com
